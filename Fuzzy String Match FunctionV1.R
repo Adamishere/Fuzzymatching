@@ -1,11 +1,5 @@
 #install.packages("stringdist")
 library(stringdist)
-setwd("C:/Users/21509/Desktop/Projects/NSF Data/Matching/")
-
-#import
-input <-read.csv("C:/Users/21509/Desktop/Projects/NSF Data/Matching/NPRA Pilot Final Sample.csv")
-frame <-read.csv("C:/Users/21509/Desktop/Projects/NSF Data/Matching/Copy of AgencyListwContactInfo.csv")
-frame$name2<-frame$name
 
 # This function calaculates the string distance between two string variables and selects the match with the 
 # smallest distance. It takes 7 arguments:
@@ -89,10 +83,6 @@ names2<-c("xAaliyah",
           "xxAddison")
 dataset2<-data.frame(names2,stringsAsFactors =FALSE)
 
-system.time(fuzzymatch(dataset1,dataset2,"names1","names2",meth="osa",c("names1","names1")))
+example<-fuzzymatch(dataset1,dataset2,"names1","names2",meth="osa")
+head(example)
 
-
-
-
-dat3<-fuzzymatch(input,frame,"name","name2",c("ein","state"),"ID","osa")
-head(dat3)
