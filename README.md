@@ -10,6 +10,6 @@ Using the "stringdist" package in R, I was able to calculate the "distance" betw
 
 However, the challege with this approach is that we need to compare every string in the DNC list with every string in the master list. Doing so using a vectorized approach would create an extremely large matrix of distances to calculate (1,500,000 X 2,000). So instead, I opted for a iterative approach, looping each record in the master list against the DNC list (creating a smaller 1 x 2,000 matrix), the best match was retained and stored in cumulative dataset (along with the distance value of the match).
 
-The purpose was to speed up manual review rather than automate the entire process (accuracy was important). Final output data was used by reviewers to quickly review match with small and large differences, and focus on ambigous cases best left for human reviewers. 
+The purpose was to speed up manual review rather than automate the entire process (accuracy was important). Final output data was used by reviewers to quickly exclude matches with small and large differences, and focus on ambigous cases best left for human reviewers. 
 
 Finally, I generalized this approach into a function to be used for similar problems.
