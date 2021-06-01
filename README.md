@@ -2,7 +2,7 @@
 Match to strings based on String Distance.
 
 # Problem:
-I was tasked to identify institutions from a Do Not Contact (DNC) list (n=2,000) and remove them from our master list (n=1,500,000). Unforunately, there were no unique IDs associated with the smaller DNC list, instead it only contain their institution name. Both lists were developed through manual data entry, leaving large inconsistencies in the names an organization can be found as on both lists (e.g., spelling errors, abreviations, white space, transpositions of words, etc.). The volume required for manual review of all DNC institutions was higher than fesibile possible given our resources.
+I was tasked to identify institutions from a Do Not Contact (DNC) list (n=2,000) and remove them from our master list (n=1,500,000). Unforunately, there were no unique IDs associated with the smaller DNC list, instead it only contains their institution name. Both lists were developed through manual data entry, leaving large inconsistencies in the names an organization can be found as on both lists (e.g., spelling errors, abreviations, white space, transpositions of words, etc.). The volume required for manual review of all DNC institutions was higher than fesibile possible given our resources.
 
 # Solution
 
