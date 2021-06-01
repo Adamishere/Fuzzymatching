@@ -32,8 +32,8 @@ fuzzymatch<-function(dat1,dat2,string1,string2,meth,id1,id2){
   if(missing(id2)){id2=NULL}
      
   #### lowercase text only
-  dat1[,string1]<-as.character(tolower(dat1[,string1]))#force character, if values are factors
-  dat2[,string2]<-as.character(tolower(dat2[,string2]))
+  dat1[,string1]<-as.character(tolower(unlist(dat1[,string1])))#force character, if values are factors
+  dat2[,string2]<-as.character(tolower(unlist(dat2[,string2])))
   
     #Loop through dat1 dataset iteratively. This is a work around to allow for large datasets to be matched
     #Can run as long as dat2 dataset fits in memory. Avoids full Cartesian join.
